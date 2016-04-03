@@ -1,0 +1,55 @@
+{
+  "name": "sample-magento-module",
+  "type": "magento-module",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "^3.0",
+    "inviqa/magento-symfony-container": "^0.6",
+    "inviqa/symfony-container-generator": "^0.3"
+  },
+  "require-dev": {
+    "self-for-composer": "*"
+    "phpspec/phpspec": "^2.4",
+    "bossa/phpspec2-expect": "*",
+    "behat/behat": "^3.0",
+    "behat/mink" : "1.6.*",
+    "behat/mink-selenium2-driver": "*",
+    "sensiolabs/behat-page-object-extension": "~2.0",
+    "darsadow/behat-parameters-extension": "dev-master",
+    "magetest/magento-behat-extension": "dev-feature/Behat3",
+    "ctasca/magefix": "^1.5"
+  },
+  "extra": {
+    "magento-root-dir": "public"
+  },
+  "repositories": {
+    "magento": {
+      "type": "composer",
+      "url": "https://packages.magento.com"
+    },
+    "module-for-testing": {
+      "type": "path",
+      "url": "./composer-testing-dependency"
+    },
+    "magefix": {
+      "type": "vcs",
+      "url": "https://github.com/ctasca/magefix.git"
+    }
+  },
+  "config": {
+    "bin-dir": "bin"
+  },
+  "autoload": {
+    "psr-0": {
+      "":[
+        "public/app",
+        "public/lib",
+        "public/app/code/local",
+        "public/app/code/community",
+        "public/app/code/core",
+        "src"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
