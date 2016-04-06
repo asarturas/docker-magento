@@ -26,9 +26,9 @@
       "type": "composer",
       "url": "https://packages.magento.com"
     },
-    "module-for-testing": {
+    "self-for-composer": {
       "type": "path",
-      "url": "./composer-testing-dependency"
+      "url": "./self-for-composer"
     },
     "magefix": {
       "type": "vcs",
