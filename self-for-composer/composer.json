@@ -1,0 +1,8 @@
+{
+  "name": "self-for-composer",
+  "type": "magento-module",
+  "require": {
+  },
+  "require-dev": {
+  },
+}
