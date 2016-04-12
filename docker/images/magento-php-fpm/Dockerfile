@@ -1,4 +1,4 @@
-FROM php:5.5-fpm
+FROM php:5.6-fpm
 
 MAINTAINER Arturas Smorgun "arturas@smorgun.lt"
 
@@ -12,6 +12,8 @@ RUN curl -sS https://getcomposer.org/installer | php && \
 RUN apt-get update && \
     apt-get install -y git mysql-client libmcrypt-dev libpng-dev && \
     docker-php-ext-install mbstring pdo_mysql mcrypt gd zip && \
+    apt-get clean && apt-get purge && \
+    rm -rf /var/lib/apt/lists/* /var/cache/apt/* && \
     usermod -u 1000 www-data
 
 ADD config /shared-config

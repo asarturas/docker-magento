@@ -17,6 +17,7 @@ cd /var/www/app/public
 
 n98-magerun config:set "web/unsecure/base_url" "http://$APP_HOSTNAME/"
 n98-magerun config:set "web/secure/base_url" "http://$APP_HOSTNAME/"
+n98-magerun config:set "dev/template/allow_symlink" 1
 n98-magerun sy:se:ru
 n98-magerun in:re:al
 n98-magerun admin:user:create admin arturas@smorgun.lt admin123
